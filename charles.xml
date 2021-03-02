@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UI_INFO id="SIGNBOARD">
+  <PREVIEW_INFOS>
+    <PREVIEW_INFO id="AOD_BASIC">
+      <PREVIEW_TYPE type="NORMAL">
+        <PREVIEW_ITEM id="AOD_BASIC_BG" x="0" y="0" type="image" value="SIGNBOARD/res/aod_bg.png" index="1" />
+        <PREVIEW_ITEM id="AOD_BASIC_STATUS" x="229" y="557" type="image" value="SIGNBOARD/res/aod_status.png" index="2" />
+        <PREVIEW_ITEM id="AOD_BASIC_SIGNATURE" x="180" y="156" type="image" value="SIGNBOARD/res/aod_sticker_resource_name.png" parameter_ref="SIGNBOARD/AOD_BASIC/AOD_STICKER" guide_ref_id="AOD_STICKER" w="360" h="360" guide_line_position="180,156,360,360" index="3" />
+      </PREVIEW_TYPE>
+    </PREVIEW_INFO>
+  </PREVIEW_INFOS>
+  <ITEM_INFOS>
+    <ITEM_INFO id="AOD_BASIC">
+      <ITEM id="AOD_STICKER" index="1" refresh_with_selection="false">
+        <GROUP id="NONE">
+          <RESOURCE sub_group_index="0" name="aod_sticker_resource_name.png" type="drawable" target_path="res/drawable-xhdpi" default_value="SIGNBOARD/res/aod_sticker_resource_name.png" default_item="true" view_mode="NORMAL">
+            <DEPENDENCY_RESOURCE name="aod_sticker_resource_name.png" type="drawable" target_path="res/drawable-night-xhdpi" />
+          </RESOURCE>
+        </GROUP>
+      </ITEM>
+    </ITEM_INFO>
+  </ITEM_INFOS>
+</UI_INFO>
