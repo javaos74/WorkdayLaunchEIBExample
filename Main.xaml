@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1191,2264" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Workday.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwa="clr-namespace:UiPath.Workday.Activities;assembly=UiPath.Workday.Activities" xmlns:uwi="clr-namespace:UiPath.Workday.Integrations;assembly=UiPath.Workday" xmlns:uwm="clr-namespace:UiPath.Workday.Models;assembly=UiPath.Workday" xmlns:uws="clr-namespace:UiPath.Workday.ServiceFactory;assembly=UiPath.Workday" xmlns:uws1="clr-namespace:UiPath.Workday.Services;assembly=UiPath.Workday" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1589,2424" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Workday.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwa="clr-namespace:UiPath.Workday.Activities;assembly=UiPath.Workday.Activities" xmlns:uwi="clr-namespace:UiPath.Workday.Integrations;assembly=UiPath.Workday" xmlns:uwm="clr-namespace:UiPath.Workday.Models;assembly=UiPath.Workday" xmlns:uws="clr-namespace:UiPath.Workday.ServiceFactory;assembly=UiPath.Workday" xmlns:uws1="clr-namespace:UiPath.Workday.Services;assembly=UiPath.Workday" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
@@ -72,7 +72,7 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="502,2059" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="502,2259" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Passwd" />
       <Variable x:TypeArguments="x:String" Name="Username" />
@@ -83,19 +83,15 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="WorkdayCred" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="460,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Passwd]" Username="[Username]" />
-    <uwa:WorkdayScopeActivity ExistingConnection="{x:Null}" WorkdayConnection="{x:Null}" DisplayName="Workday Application Scope" sap:VirtualizedContainerService.HintSize="460,1905" sap2010:WorkflowViewState.IdRef="WorkdayScopeActivity_1" Password="[Passwd]" TelemetryEnabled="False" Tenant="uipath_dpt1" TenantUrl="https://charelsworkdayapp.azurewebsites.net" ThrowExceptionOnError="False" Username="[Username]">
+    <uwa:WorkdayScopeActivity ExistingConnection="{x:Null}" WorkdayConnection="{x:Null}" DisplayName="Workday Application Scope" sap:VirtualizedContainerService.HintSize="460,2105" sap2010:WorkflowViewState.IdRef="WorkdayScopeActivity_1" Password="[Passwd]" TelemetryEnabled="False" Tenant="uipath_dpt1" TenantUrl="https://charelsworkdayapp.azurewebsites.net" ThrowExceptionOnError="False" Username="[Username]">
       <uwa:WorkdayScopeActivity.Body>
         <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="426,1794" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="426,1994" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
-              <Variable x:TypeArguments="uwi:Integration_Service_Component_Override_DataType[]" Name="myOption">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="uwi:Integration_Service_Component_Override_DataType[]" ExpressionText="{}{ new Integration_Service_Component_Override_DataType, new Integration_Service_Component_Override_DataType}" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="uwi:Integration_Service_Component_Override_DataType[]" Default="[{ new Integration_Service_Component_Override_DataType, new Integration_Service_Component_Override_DataType}]" Name="myOption" />
               <Variable x:TypeArguments="uwi:Integration_Abstract_Value_DataType" Name="ValueData" />
               <Variable x:TypeArguments="uwi:Integration_Attachment_DataType" Name="AttachmentValue" />
               <Variable x:TypeArguments="x:String" Name="FileContent" />
@@ -116,9 +112,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim val As Integration_Abstract_Value_DataType&#xA;val.Boolean = True&#xA;Param1.Field_Override_Data = { New Integration_Service_Component_Field_Override_DataType }&#xA;Param1.Field_Override_Data(0).Field_Name = &quot;Validate Only Load&quot;&#xA;Param1.Field_Override_Data(0).Item = { val }&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
-                      <InOutArgument x:TypeArguments="uwi:Integration_Service_Component_Override_DataType" x:Key="Param1">
-                        <mva:VisualBasicReference x:TypeArguments="uwi:Integration_Service_Component_Override_DataType" ExpressionText="myOption(0)" />
-                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="uwi:Integration_Service_Component_Override_DataType" x:Key="Param1">[myOption(0)]</InOutArgument>
                     </ui:InvokeCode.Arguments>
                   </ui:InvokeCode>
                 </Sequence>
@@ -200,6 +194,22 @@
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="uwi:Integration_Service_Component_Field_Override_DataType[]">[{ new Integration_Service_Component_Field_Override_DataType }]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+              <Assign.To>
+                <OutArgument x:TypeArguments="uwi:ItemChoiceType">[myOption(1).ItemElementName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="uwi:ItemChoiceType">[ItemChoiceType.Data_Source]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[myOption(1).Item]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_10">
